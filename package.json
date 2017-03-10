@@ -7,7 +7,7 @@
     "node": "7.2.1"
   },
   "scripts": {
-    "start": "node devServer.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf dist",
     "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.prod.config.js",
