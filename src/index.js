@@ -39,7 +39,7 @@ const showResults = values => new Promise(resolve => {
 })
 
 let render = () => {
-  const SimpleForm = require('./SimpleForm').default
+  const SimpleForm = require('./components/App').default
   ReactDOM.render(
     <Provider store={store}>
     <SimpleForm onSubmit={showResults}/>
@@ -65,9 +65,8 @@ if (module.hot) {
   const rerender = () => {
     setTimeout(render)
   }
-  module.hot.accept('./SimpleForm', rerender)
-  module.hot.accept('./Simple.md', rerender)
-  module.hot.accept('!!raw!./SimpleForm', rerender)
+  module.hot.accept('./components/App', rerender)
+  module.hot.accept('!!raw!./components/App', rerender)
 }
 
 render()
