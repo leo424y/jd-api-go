@@ -9,7 +9,6 @@
   "scripts": {
     "start": "node index.js",
 		"test": "mocha",
-	  "postinstall": "bower install && grunt build",
     "clean": "rimraf dist",
     "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack",
