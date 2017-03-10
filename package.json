@@ -1,5 +1,14 @@
 {
-  "private": true,
+	"name": "jd-api-go",
+  "version": "0.0.1",
+  "description": "JD Stores & Beauticians",
+  "engines": {
+    "node": "7.2.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
   "scripts": {
     "clean": "rimraf dist",
     "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
@@ -9,6 +18,8 @@
     "prepublish": "npm run lint && npm run build"
   },
   "dependencies": {
+		"ejs": "2.4.1",
+    "express": "4.13.3",
     "babel-polyfill": "^6.16.0",
     "html-loader": "^0.4.4",
     "json-loader": "0.5.4",
@@ -41,5 +52,11 @@
     "webpack": "^1.13.3",
     "webpack-dev-middleware": "^1.8.4",
     "webpack-hot-middleware": "^2.13.2"
-  }
+  },
+	"keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
 }
