@@ -41,7 +41,6 @@
     "eslint": "^3.11.1",
     "eslint-config-rackt": "1.1.1",
     "eslint-loader": "^1.6.1",
-		"eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-babel": "^4.0.0",
     "eslint-plugin-react": "^6.7.1",
     "eventsource-polyfill": "0.9.6",
