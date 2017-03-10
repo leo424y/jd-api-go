@@ -4,7 +4,7 @@
   "description": "JD Stores & Beauticians",
   "main": "server.js",
 	"engines": {
-    "node": "7.2.1"
+    "node": "6.9.4"
   },
   "scripts": {
     "start": "node server.js",
