@@ -1,11 +1,10 @@
 import React from 'react'
-import List from 'list.js'
 import ReactDOM from 'react-dom'
+import List from 'list.js'
 import { Provider } from 'react-redux'
 import { createStore, combineReducers } from 'redux'
 import { reducer as reduxFormReducer } from 'redux-form'
-// import { App, Code, Values, generateExampleBreadcrumbs } from 'redux-form-website-template'
-{/*Markdown,*/}
+import App from './components/App'
 
 const dest = document.getElementById('content')
 const reducer = combineReducers({

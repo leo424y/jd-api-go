@@ -1,45 +1,31 @@
-var path = require('path');
 var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
-  devtool: 'eval',
   entry: [
-    'babel-polyfill',
-    'eventsource-polyfill', // necessary for hot reloading with IE
-    'webpack-hot-middleware/client',
     './src/index'
   ],
+  module: {
+    loaders: [
+      { test: /\.js?$/, loader: 'babel', exclude: /node_modules/ },
+      { test: /\.s?css$/, loader: 'style!css!sass' },
+    ]
+  },
+  resolve: {
+    extensions: ['', '.js']
+  },
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/dist/'
+    path: path.join(__dirname, '/dist'),
+    publicPath: '/',
+    filename: 'bundle.js'
+  },
+  devServer: {
+    contentBase: './dist',
+    hot: true
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin()
-  ],
-  resolve: {
-    modulesDirectories: [
-      'src',
-      'node_modules'
-    ],
-    extensions: [ '', '.json', '.js' ]
-  },
-  module: {
-    loaders: [
-      {
-        test: /\.jsx?/,
-        loaders: [ 'babel', 'eslint' ],
-        include: path.join(__dirname, 'src')
-      },
-      {
-        test: /\.json$/,
-        loader: 'json-loader'
-      },
-      {
-        test: /\.md/,
-        loaders: [ "html-loader", "markdown-loader" ]
-      }
-    ]
-  }
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
+  ]
 };

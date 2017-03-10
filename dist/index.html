@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charSet="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>JD Stores and Beauticians</title>
+  <link href="https://redux-form.com/6.5.0/bundle.css"
+    media="screen, projection"
+    rel="stylesheet" type="text/css"/>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
+    media="screen, projection" rel="stylesheet" type="text/css"/>
+  <meta itemprop="name" content="Redux Form"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Redux Form"/>
+  <meta property="og:site_name" content="Redux Form"/>
+  <meta property="og:description"
+        content="The best way to manage your form state in Redux."/>
+  <meta property="og:image" content="logo.png"/>
+  <meta property="twitter:site" content="@erikras"/>
+  <meta property="twitter:creator" content="@erikras"/>
+
+</head>
+<body>
+<div id="content">
+  <div class="loader">Loading...</div>
+</div>
+<center>
+<div id="users">
+  <input class="search" placeholder="查詢" />
+  <button class="sort" data-sort="name">
+    名稱↕️
+  </button>
+  <button class="sort" data-sort="title">
+    職稱↕️
+  </button>
+  <button class="sort" data-sort="store_id">
+    店名↕️
+  </button>
+  <button class="sort" data-sort="phone">
+    電話↕️
+  </button>
+
+  <ul class="list" id='beauticians_list'>
+    <li>
+      <label class="name" ></label>
+      <label class="title"></label>
+      <label class="phone"></label>
+      <label class="store_id"></label>
+    </li>
+  </ul>
+
+</div>
+</center>
+
+<script src="/bundle.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+</body>
+</html>

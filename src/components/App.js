@@ -1,3 +1,4 @@
+import '../assets/stylesheets/base.css'
 import React from 'react'
 import { connect } from 'react-redux'
 import { Field, reduxForm, formValueSelector } from 'redux-form'
